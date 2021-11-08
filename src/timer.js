@@ -21,12 +21,18 @@ class Timer extends React.Component{
     }
     stopinterval = ()=>{
         clearInterval(interval);
+        
     }
     componentDidUpdate(){
         if(this.state.secound == 0){
+
             this.stopinterval();
+            this.setState({
+                secound : 10
+            })
         }
     }
+    
     render(){
         return(
             <div>
